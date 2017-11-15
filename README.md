@@ -2,7 +2,7 @@
 MSVC++ DLL/LIB project - A cryptographic library for exchanging traffic with a web server<br>
 Used lib/dll OpenSSL 1.1.0 and Zlib 1.2.7
 
-crypton4.dll use:<br>
+crypton.dll use:<br>
 Functions: AES-256 Encrypt/Decrypt binary message/binary data (any size)<br>
 Functions  RSA-2048/sha256 Generate Private/Public/Certificate to memory or to files<br>
 Functions: RSA-2048/sha256 Crypt/Decrypt message  (max 240 byte message)<br>

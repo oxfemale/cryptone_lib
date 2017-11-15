@@ -1,22 +1,22 @@
 # Cryptone
-MSVC++ DLL/LIB project - A cryptographic library for exchanging traffic with a web server
+MSVC++ DLL/LIB project - A cryptographic library for exchanging traffic with a web server<br>
 Used lib/dll OpenSSL 1.1.0 and Zlib 1.2.7
 
-crypton4.dll use:
-Functions: AES-256 Encrypt/Decrypt binary message/binary data (any size)
-Functions  RSA-2048/sha256 Generate Private/Public/Certificate to memory or to files
-Functions: RSA-2048/sha256 Crypt/Decrypt message  (max 240 byte message)
-Functions: RSA-2048/sha256 Crypt/Decrypt any binary file size to output file
-Functions: Zlib stream deflate(zip)/inflate(unzip) message/binary data
-Functions: Convert char*->HexChar*/HexChar*->char*, example "123"->"313233", "313233"->"123"
-Functions: char*->base64, base64->char*
-
+crypton4.dll use:<br>
+Functions: AES-256 Encrypt/Decrypt binary message/binary data (any size)<br>
+Functions  RSA-2048/sha256 Generate Private/Public/Certificate to memory or to files<br>
+Functions: RSA-2048/sha256 Crypt/Decrypt message  (max 240 byte message)<br>
+Functions: RSA-2048/sha256 Crypt/Decrypt any binary file size to output file<br>
+Functions: Zlib stream deflate(zip)/inflate(unzip) message/binary data<br>
+Functions: Convert char*->HexChar*/HexChar*->char*, example "123"->"313233", "313233"->"123"<br>
+Functions: char*->base64, base64->char*<br>
+<br>
 ```cpp
 /*
 AES-256 Encrypt data by 
 using openssl lib with given keys:
-	unsigned char * key256 = (unsigned char *)"11112222333344445555666677778888"; // обязательно 32 символа (256 бит)
-	unsigned char * iv128 = (unsigned char *)"1111333355557777"; // обязательно 16 символов (128 бит)
+	unsigned char * key256 = (unsigned char *)"11112222333344445555666677778888"; // Г®ГЎГїГ§Г ГІГҐГ«ГјГ­Г® 32 Г±ГЁГ¬ГўГ®Г«Г  (256 ГЎГЁГІ)
+	unsigned char * iv128 = (unsigned char *)"1111333355557777"; // Г®ГЎГїГ§Г ГІГҐГ«ГјГ­Г® 16 Г±ГЁГ¬ГўГ®Г«Г®Гў (128 ГЎГЁГІ)
 return crypted in unsigned char*
 */
 unsigned char* aes256_encryptC(unsigned char* data, int dataLen, unsigned char * key, unsigned char * iv, int &cryptedlen);
@@ -26,8 +26,8 @@ unsigned char* aes256_encryptC(unsigned char* data, int dataLen, unsigned char *
 /*
 AES-256 Decrypt data by 
 using openssl lib with given keys:
-	unsigned char * key256 = (unsigned char *)"11112222333344445555666677778888"; // обязательно 32 символа (256 бит)
-	unsigned char * iv128 = (unsigned char *)"1111333355557777"; // обязательно 16 символов (128 бит)
+	unsigned char * key256 = (unsigned char *)"11112222333344445555666677778888"; // Г®ГЎГїГ§Г ГІГҐГ«ГјГ­Г® 32 Г±ГЁГ¬ГўГ®Г«Г  (256 ГЎГЁГІ)
+	unsigned char * iv128 = (unsigned char *)"1111333355557777"; // Г®ГЎГїГ§Г ГІГҐГ«ГјГ­Г® 16 Г±ГЁГ¬ГўГ®Г«Г®Гў (128 ГЎГЁГІ)
 	return decrypted in unsigned char*
 */
 unsigned char* aes256_decryptC(unsigned char* cipher, int cipherLen, unsigned char * key, unsigned char * iv, int &decryptLen);
